@@ -1,0 +1,127 @@
+.student-list {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.student-list h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.no-data {
+  text-align: center;
+  color: #666;
+  padding: 3rem;
+  font-size: 1.1rem;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.student-table thead {
+  background-color: #f8f9fa;
+}
+
+.student-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.student-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  color: #495057;
+}
+
+.student-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status.active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .student-table {
+    font-size: 0.875rem;
+  }
+  
+  .student-table th,
+  .student-table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .student-table thead {
+    display: none;
+  }
+  
+  .student-table,
+  .student-table tbody,
+  .student-table tr,
+  .student-table td {
+    display: block;
+    width: 100%;
+  }
+  
+  .student-table tbody tr {
+    margin-bottom: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 1rem;
+  }
+  
+  .student-table td {
+    padding: 0.5rem 0;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .student-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #495057;
+  }
+  
+  .actions {
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #dee2e6;
+  }
+}
